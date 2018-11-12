@@ -1,235 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="vi">
   <head>
+    <title> Tin dài </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> tin dài  </title>
-
     <style>
+      * {
+      box-sizing: border-box;
+      }
 
-      .container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      width: 900px;
-}
-
-      .column {
+      .flex-container {
       display: flex;
       flex-flow: column wrap;
-      align-items: flex-start;
+      background: url(wood.jpg) repeat center;
+      justify-content: space-around;
       }
 
-      .piece {
-      width: 500px;
-      height: auto;
+      .header {
       background-color: ghostwhite;
-      }
-
-      @media all and (max-width: 500px) {
-      .piece {
-      flex-direction: column;
-      }
-      }
-      
-      .site-nav {
-      background-color: palevioletred;
-      list-style: none;
-      padding: 0;
-      width: 250px;
-      border: 1px solid mediumvioletred;
-      }
-      
-      .site-nav-item {
-      border-bottom: 1px solid mediumvioletred;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      border: 1px solid #371005;
+      width: 98%;
+      margin: 10px;
+      text-align: center;
+      font-size: 2vw;
+      font-family: helvetica;
       padding: 5px;
       }
 
-      .site-nav-item:last-child {
-      border-bottom: none;
+      .line {
+      border: 2px solid #371005;
+      padding: 0.5px;
       }
-      
-      .site-nav-item a {
-      text-decoration: none;
+
+      .navbar {
+      display: flex;
+      flex-direction: column;
+
+      background-color: #371005;
+      }
+
+      .navbar a {
       color: white;
+      font-size: 1.5vw;
       font-weight: bold;
+      text-decoration: none;
+      border-style: inset;
+      text-align: left;
+      padding: 10px;
       }
 
-      .site-nav-item a:hover {
-      text-decoration: underline;
+      .navbar a.active {
+      background-color: #d9b597;
+      color: black;
       }
 
-      body {
-      font-family: helvetica;
+      .navbar a:hover:not(.active) {
+      background-color: #a74c2a;
+      color: black;
+      }
+
+      .row {
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      padding: 7px;
+      justify-content: space-around;
+      }
+
+      .left {
+      display: flex;
+
+      width: 22.5%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);      
+      flex-flow: column wrap;
+      align-items: center;
+      }
+
+      .right {
+      display: flex;
+      width: 70%;
+
+      flex-flow: column wrap;
+      align-items: center;
+      }
       
+      .piece {
+      background-color: ghostwhite;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      width: 100%;
+      height: auto;
+      margin: 5px;
+      padding: 5px;
+      font-family: helvetica;
       }
 
       .news {
-      color: white;
-      background-color: teal;
+      color: black;
+
       padding: 5px;
+      text-align: left;
       }
+
+      .news-body {
+      color: black;
+      padding: 10px;
+      }
+
+      .footer {
+      padding: 20px;
+      text-align: center;
+      background: ghostwhite;
+      font-family: helvetica;
+      font-size: 1vw;
+      }
+
+      @media only screen and (max-width: 700px) {
+      .left {width: 100%;}
+      .right {width: 100%}
+      }
+
       
+
     </style>
-    
-    
   </head>
-
   <body>
-    <div class="container">
-      <div class="column">
-    
-	<nav class="site-menu">
-      	  <ul class="site-nav">
+    <div class="flex-container">
 
-	    <li class="site-nav-item">
-	      <a href="index.html"> bà con chú ý..</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="post.html">tin dài</a>
-	    </li>
-
-	    <li class="site-nav-item">
-	      <a href="lambda.html"> phổ cập tin học</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="game.html">truyện dân  gian</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="brain.html"> tìm hiểu về não bộ</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="food.html">chế độ ăn uống</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="sexed.html"> giáo dục tình dục</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="belief.html">thế nào là suy nghĩ khoa học</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="sport.html"> thể dục thể thao</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="logic.html">tư duy logic</a>
-	    </li>
-
-	    
-	    
-	  </ul>
-	</nav>
+      <div class="header">
+	<p class="line"></p>
+	<h1> &#10903 Trang tin &#10902 </h1>
+	<p class="line"></p>
+	<p style="font-size: 1vw;font-weight:bold"> =: ISSUE 01 == 14 NOVEMBER, 2018 := </p>
+ 	<p class="line"></p>
       </div>
-      <div class="column">
-        
-	<div class="piece">
-	  <article>
-	    <h2 class="news">  phổ cập tin học   </h2>
+
+      <div class="row">
+	<div class="left">
+	  <div class="piece">
+	    <div class="navbar">
+	      
+	      <a href="index.html"> bà con chú ý.. </a>
+	      <a class="active" href="post.html"> tin dài </a>
+	    </div>
+	    <div>
+	      <img src="thu1.jpg" alt="mit-dac by thu" width="100%">
+	      <div> <p style="text-align: center"> courtesy: thu </p> </div>
+	    </div>
+	      <div class="navbar">
+	      <a href="lambda.html"> phổ cập tin học</a>
+	      <a href="game.html">truyện dân  gian</a>
+	      <a href="brain.html"> tìm hiểu về não bộ</a>
+	      <a href="food.html">chế độ ăn uống</a>
+	      <a href="sexed.html"> giáo dục tình dục</a>
+	      <a href="belief.html">thế nào là suy nghĩ khoa học</a>
+	      <a href="sport.html"> thể dục thể thao</a>
+	      <a href="logic.html">tư duy logic</a>
+	   
+	    </div>
+
+	  </div>
+	</div>
+
+	<div class="right">
+	  <div class="piece">
+
+
+	    <article>
+	    <h2 class="news"> &#9822  phổ cập tin học   </h2>
 	    <p> tôi khẳng định lại rằng sau khi đọc sách how to design programs edition 2, năng suất sẽ tăng từ 50 đến 100 lần </p>
 	    <p>	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
-	    <a href="lambda.html"> đọc thêm </a>
-	  </article>
-	</div>
-	
-	<div class="piece">
+	      <a href="lambda.html"> đọc thêm </a>
+	    </p>
+	    </article>
+  
+	  </div>
+
+<div class="piece">
 	  <article>
-	    <h2 class="news">  truyện dân gian và lý thuyết trò chơi   </h2>
+	    <h2 class="news"> &#9822  truyện dân gian và lý thuyết trò chơi   </h2>
 	    <p> các tráng sĩ đã sẵn sàng lên đường cứu công chúa chưa? </p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
+	      
+	      <a href="game.html"> đọc thêm </a>
 	      </p>
-	    <a href="game.html"> đọc thêm </a>
 	  </article>
 	</div>
 	
       	<div class="piece">
 	  <article>
-	    <h2 class="news"> tìm hiểu về não bộ  </h2>
+	    <h2 class="news"> &#9822 tìm hiểu về não bộ  </h2>
 	    <p> bộ não sử dụng rất nhiều năng lượng và oxy, vì vậy cần ăn uống đầy đủ và tập thể dục đều đặn (ví dụ nhảy dây) ..</p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="brain.html">đọc thêm</a>
+</p>
 	  </article>
 	</div>
 
 	<div class="piece">
 	  <article>
-	    <h2 class="news"> chế độ ăn uống  </h2>
+	    <h2 class="news"> &#9822  chế độ ăn uống  </h2>
 	    <p> chế độ ăn của người việt toàn đạm đểu, tôm cá nhiễm kháng sinh và rau bơm thuốc sâu lừa nhau..</p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="food.html">đọc thêm</a>
+</p>
 	  </article>
 	</div>
 	
 	<div class="piece">
 	  <article>
-	    <h2 class="news">giáo dục tình dục  </h2>
+	    <h2 class="news"> &#9822 giáo dục tình dục  </h2>
 	    <p> giáo dục tình dục không phải là nói ẩn dụ. tôi chống lại việc giáo dục tình dục bằng cách nói luyến láy tưởng thế là hay  </p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="sexed.html">đọc thêm</a>
+</p>
 	  </article>
 	</div>
 
 	<div class="piece">
 	  <article>
-	    <h2 class="news"> thế nào là suy nghĩ khoa học  </h2>
+	    <h2 class="news"> &#9822 thế nào là suy nghĩ khoa học  </h2>
 	    <p> thế nào là tự do niềm tin? tôi không tin tôn giáo, thần thánh, hồn ma, các kiếp.. tôi không tin vào thiên đường, tôi chỉ muốn có phần chia công bằng trên mặt đất này, vào kiếp này.. </p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="belief.html">đọc thêm</a>
+</p>
 	  </article>
 	</div>
 	
 	<div class="piece">
 	  <article>
-	    <h2 class="news"> thể dục thể thao </h2>
+	    <h2 class="news"> &#9822 thể dục thể thao </h2>
 	    <p> đi làm xách nước nhiều không phải thể dục thể thao mà chỉ gây hủy hoại xương sống thêm do đè nặng lâu ngày  </p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="sport.html"> đọc thêm </a>
+</p>
 	  </article>
 	</div>
 
 	<div class="piece">
 	  <article>
-	    <h2 class="news"> tư duy logic </h2>
+	    <h2 class="news"> &#9822 tư duy logic </h2>
 	    <p> A đúng và B đúng suy ra A và B đúng.. số cô chẳng giàu thì nghèo, ngày 30 tết thịt treo trong nhà. A: số cô giàu B số cô nghèo, A hoặc B đúng..  </p>
 	    <p>
 	      Non aspernatur debitis aut perferendis quidem repellendus facere. Accusantium velit et ut maxime ipsam animi dolore. Eos architecto at et. Modi est omnis sequi omnis numquam id minima autem.
 	      In voluptas quibusdam sit non. Ipsam commodi voluptatum molestiae cum ut dolores. Perferendis perferendis minus deleniti dolor itaque. Eveniet facilis voluptate exercitationem eum officiis eveniet.
 	      Harum praesentium consequuntur facere velit atque et. Numquam est ex laborum cumque. Accusamus impedit architecto occaecati quisquam rerum. Sunt in quis fugit velit sed voluptate harum.
-	      </p>
+	      
 	    <a href="logic.html"> đọc thêm </a>
+</p>
 	  </article>
 	</div>
 
+
+
+	  
+	</div>
       </div>
-    </div>
-    
+      <div class="footer">
+	<p> ~ this product is a demonstration. instructor: <img src="thang.jpg" alt="thang" width="2%"> ~ </p>
+      </div>
+      
   </body>
-
-
 </html>
+
+
