@@ -1,0 +1,212 @@
+<!doctype html>
+
+<html lang="vi">
+  <head>
+    <title> Vì vốn dĩ đã chả có ngày mai </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+      box-sizing: border-box;
+      }
+
+      .flex-container {
+      display: flex;
+      flex-flow: column wrap;
+      background: url(wood.jpg) repeat center;
+      justify-content: space-around;
+      }
+
+      .header {
+      background-color: ghostwhite;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      border: 1px solid #371005;
+      width: 98%;
+      margin: 10px;
+      text-align: center;
+      font-size: 2vw;
+      font-family: helvetica;
+      padding: 5px;
+      }
+
+      .line {
+      border: 2px solid #371005;
+      padding: 0.5px;
+      }
+
+      .navbar {
+      display: flex;
+      flex-direction: column;
+
+      background-color: #371005;
+      }
+
+      .navbar a {
+      color: white;
+      font-size: 1.5vw;
+      font-weight: bold;
+      text-decoration: none;
+      border-style: inset;
+      text-align: left;
+      padding: 10px;
+      }
+
+      .navbar a.active {
+      background-color: #d9b597;
+      color: black;
+      }
+
+      .navbar a:hover:not(.active) {
+      background-color: #a74c2a;
+      color: black;
+      }
+
+      .row {
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      padding: 7px;
+      justify-content: space-around;
+      }
+
+      .left {
+      display: flex;
+
+      width: 25%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);      
+      flex-flow: column wrap;
+      align-items: center;
+      }
+
+      .right {
+      display: flex;
+      width: 70%;
+
+      flex-flow: column wrap;
+      align-items: center;
+      }
+      
+      .piece {
+      background-color: ghostwhite;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      width: 100%;
+      height: auto;
+      margin: 5px;
+      padding: 5px;
+      font-family: helvetica;
+      }
+
+      .news {
+      color: black;
+
+      padding: 5px;
+      text-align: left;
+      }
+
+      .news-body {
+      color: black;
+      padding: 10px;
+      }
+
+      .footer {
+      padding: 20px;
+      text-align: center;
+      background: ghostwhite;
+      font-family: helvetica;
+      font-size: 1vw;
+      }
+
+      @media only screen and (max-width: 700px) {
+      .left {width: 100%;}
+      .right {width: 100%}
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+
+      <div class="header">
+	<p class="line"></p>
+	<h1> &#10903 Trang tin &#10902 </h1>
+	<p class="line"></p>
+	<p style="font-size: 1vw;font-weight:bold"> =: ISSUE 01 == 14 NOVEMBER, 2018 := </p>
+ 	<p class="line"></p>
+      </div>
+
+      <div class="row">
+	<div class="left">
+	  <div class="piece">
+	    <div class="navbar">
+	      
+	      <a href="index.html"> bà con chú ý.. </a>
+	      <a href="post.html"> tin dài </a>
+	    </div>
+	    <div>
+	      <img src="damascus.jpg" alt="damascus by e.ivor" width="100%">
+	      <div> <p style="text-align: center"> courtesy: c.hi </p> </div>
+	    </div>
+	    <div class="navbar">
+	      <a class="active" href="ck.html"> vì vốn dĩ đã chả có ngày mai </a>
+	      <a href="lambda.html"> phổ cập tin học</a>
+	      <a href="game.html">truyện dân  gian</a>
+	      <a href="brain.html"> tìm hiểu về não bộ</a>
+	      <a href="food.html">chế độ ăn uống</a>
+	      <a href="sexed.html"> giáo dục tình dục</a>
+	      <a href="belief.html">thế nào là suy nghĩ khoa học</a>
+	      <a href="sport.html"> thể dục thể thao</a>
+	      <a href="logic.html">tư duy logic</a>
+	   
+	    </div>
+
+	  </div>
+	</div>
+
+	<div class="right">
+	  <div class="piece">
+
+
+	    <article>
+	    <h2 class="news"> &#9822  vì vốn dĩ đã chả có ngày mai   </h2>
+	    <p> hình như tôi chưa kể câu chuyện này bằng tiếng việt. về việc tại sao lặng im lại khác với nói ra điều tất cả mọi người đều đã biết. </p>
+	    <p>
+1. trong một bộ lạc có 10 gia đình. cả 10 cô vợ đều ngoại tình. tất cả đàn ông trong làng đều biết là vợ của 9 anh kia ngoại tình, nhưng không ai biết chính vợ của mình ngoại tình. hàng tối, sau khi đi săn về các anh quây lại bên lửa trại, chia sẻ chuyện đời. tập tục của họ là khi ai biết vợ mình ngoại tình thì sẽ kêu gào khóc rất to bên đống lửa, chửi đời chửi người. tối nào cũng vậy, không có ai than khóc, vì không ai biết vợ mình ngoại tình. <br>
+một hôm, có một người lạ mặt đến thăm làng. ngày người lữ hành này rời đi, bên đống lửa, người này nói ra một câu rằng: <br>
+- trong làng này có một cô vợ ngoại tình. <br>
+sau đó hắn cắp đít đi mất.<br>
+sau một ngày, hai ngày.. cuộc sống trôi đi bình thường, nhưng đến ngày thứ 10, đột nhiên tất cả 10 anh đàn ông thi nhau đập phá gào khóc rất to bên đống lửa, chửi đời chửi người.</p>
+	    <p>
+2. tại sao lại như thế? <br>
+những gì người lữ khách nói ra, không phải là bình thường. mặc dù tất cả mọi người đều biết rằng có ít nhất một cô vợ ngoại tình. thế nhưng anh nào cũng nghĩ không phải vợ mình. tất cả các anh đều đợi ngày một thằng khác kêu khóc bên đống lửa rằng vợ tao ngoại tình chúng mày ơi. thế nhưng hỡi ôi 9 ngày trôi qua, và tất cả 10 anh này đều không thấy ai than khóc cả. cả 10 anh này đột ngột nhận ra sự thật phũ phàng rằng tất cả 9 anh kia đều đang đợi mình than khóc. tất cả nhận ra cùng một lúc rằng vợ mình ngoại tình. vì vậy tất cả cùng than khóc một lúc. <br>
+quả là bi kịch.</p>
+	    <p>
+3. <br>
+kết luận là có một sự khác biệt rất rõ giữa kiến thức mọi người đều biết riêng rẽ và kiến thức mà tất cả mọi người đều biết là tất cả mọi người đều biết. 2 trường hợp khác hoàn toàn: <br>
+1. kiến thức a mà mọi người đều biết, nhưng biết trong im lặng.<br>
+2. tất cả mọi người đều biết là tất cả mọi người đều biết là tất cả mọi người đều biết.... kiến thức a<br>
+thời điểm đứa trẻ thốt lên "hoàng đế cởi truồng" là thời điểm quan trọng của lịch sử. xã hội nhìn nhận sự thật lịch sử và tìm cách đi tới và tiến bộ. bởi vì trước đó, tất cả đều biết là hoàng đế cởi truồng nhưng họ biết trong riêng rẽ lặng im. sau thời điểm đó, tất cả mọi người đều biết là tất cả mọi người đều biết... là hoàng đế cởi truồng.<br>
+thời điểm tôi nói rằng "tôi biết A" là thời điểm cả hai người nhận ra rằng cả hai ta đều biết rằng cả hai ta đều biết ...điều cả hai cần biết A.<br>
+  chỉ có sau khi nhìn nhận đúng đắn, và không trốn chạy sự thật (trốn chạy vào tôn giáo hay trốn chạy vào vòng tay mẹ yêu đều là như nhau cả), thừa nhận với chính mình sự sai trái của chính mình, tìm hiểu lại phần lịch sử bị che đi, xã hội mới đi tới được. còn chối cãi là còn dậm chân tại chỗ.
+
+  </p>
+
+	    </article>
+  
+	  </div>
+
+
+
+
+	  
+	</div>
+      </div>
+      <div class="footer">
+	<p> ~ this product is a demonstration. instructor: <img src="mint.jpg" alt="t.hang" width="2%"> ~ </p>
+      </div>
+      
+  </body>
+</html>
+
+
