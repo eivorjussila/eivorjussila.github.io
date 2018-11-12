@@ -1,141 +1,184 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8">
+
+     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang tin</title>
+    <title> Trang tin </title>
+
+    
     
     <style>
-      .container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
+
+      * {
+      box-sizing: border-box;
       }
       
-      .column {
+      .flex-container {
       display: flex;
       flex-flow: column wrap;
-      align-items: flex-start;
+      background: url(wood.jpg) repeat center;
+      justify-content: space-around;
       }
-      
-      .piece {
-      width: 300px;
-      height: auto;
+     
+      .header {
       background-color: ghostwhite;
-      }
-
-      @media all and (max-width: 500px) {
-      .piece {
-      flex-direction: column;
-      }
-      }
-
-      .site-nav {
-      background-color: palevioletred;
-      list-style: none;
-      padding: 0;
-      width: 300px;
-      border: 1px solid mediumvioletred;
-      }
-
-      .site-nav-item {
-      border-bottom: 1px solid mediumvioletred;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      border: 1px solid #371005;
+      width: 98%;
+      margin: 10px;
+      text-align: center;
+      font-size: 2vw;
+      font-family: helvetica;
       padding: 5px;
       }
 
-      .site-nav-item:last-child {
-      border-bottom: none;
+      .line {
+      border: 2px solid #371005;
+      padding: 0.5px;
       }
 
-      .site-nav-item a {
+      .navbar {
+      display: flex;
+      flex-direction: column;
+      background-color: #791f06;
+      }
+
+      .navbar a {
       color: white;
+      font-size: 1.5vw;
       font-weight: bold;
       text-decoration: none;
+      border-style: inset;
+      text-align: left;
+      padding: 10px;
       }
 
-      .site-nav-item a:hover {
-      text-decoration: underline;
+      .navbar a.active {
+      background-color: #d9b597;
+      color: black;
       }
 
-      body {
+      .navbar a:hover:not(.active) {
+      background-color: #a74c2a;
+      color: black;
+      }
+
+      .row {
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      padding: 7px;
+      justify-content: space-around;
+      }
+
+      .column {
+      display: flex;
+      width: 22.5%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);      
+      flex-flow: column wrap;
+      align-items: center;
+      }
+      
+      .piece {
+      background-color: ghostwhite;
+    width: 100%;
+      height: auto;
+      margin: 5px;
+      padding: 5px;
       font-family: helvetica;
       }
 
       .news {
       color: white;
-      background-color: teal;
+      background-color: #371005;
       padding: 5px;
+      text-align: center;
       }
-      
+
+      .news-body {
+      color: black;
+      padding: 10px;
+      }
+
+      .footer {
+      padding: 20px;
+      text-align: center;
+      background: ghostwhite;
+      font-family: helvetica;
+      font-size: 1vw;
+      }
+
     </style>
-    
   </head>
-
   <body>
-    <div class="container">
+    <div class="flex-container">
 
-      <div class="column">
+      <div class="header">
+	<p class="line"></p>
+	<h1> &#10903 Trang tin &#10902 </h1>
+	<p class="line"></p>
+	<p style="font-size: 1vw;font-weight:bold"> =: ISSUE 01 == 14 NOVEMBER, 2018 := </p>
+ 	<p class="line"></p>
+      </div>
 
-	<nav class="site-menu">
-	  <ul class="site-nav">
-	    <li class="site-nav-item">
-	      <a href="index.html">bà con chú ý..</a>
-	    </li>
-	    <li class="site-nav-item">
-	      <a href="post.html">tin dài </a>
-	    </li>
-	  </ul>
-	</nav>
+      <div class="row">
+	<div class="column">
+	  <div class="piece">
+	    <div class="navbar">
+	      
+	      <a class="active" href="index.html"> bà con chú ý.. </a>
+	      <a href="post.html"> tin dài </a>
+	      
+	    </div>
+	    <div>
+	      <img src="bear.jpg" alt="bear by romas" width="100%">
+	      <div> <p style="text-align: center"> courtesy: romas </p> </div>
+	    </div>
+	  </div>
 	
-	<div class="piece">
-	  <article>
-	  <h2 class="news"> tin vườn ao chuồng   </h2>
-	  <p>
-	    bà con chú ý, khi ta đọc tin trên mạng về nông dân đắc lắc mở trang trại được một tỷ một năm ta nên suy nghĩ trước khi vội vay vốn lớn để làm theo. theo tôi, ta nên tìm cách cải thiện cuộc sống với những gì mình sẵn có. dựa vào địa hình và độ rộng của vườn ta để tự nghĩ cách cải tiến và sáng tạo. 
-	  </p>
-	  </article>
-	</div>
-      </div>
-
-      <div class="column">
-	<div class="piece">
-	  <h2 class="news"> đài cảnh giác </h2>
-	  <p> bà con chú ý, khi ta xem tivi nói về các tin lừa đảo bằng các hình thức tinh vi như thôi miên hoặc giết người hung hãn như cầm dao chọc tiết, ta không nên quá sợ hãi đâm ra hoảng gây kém ăn mất ngủ. tỉ lệ tội phạm tất nhiên ở đâu cũng có, nhưng tự mình gây sợ hãi khiến cho chất lượng đời sống giảm, gây cáu bẳn kém ăn sút cân đâm ra lại hay mua thuốc tivi quảng cáo. </p>
-	</div>
-	
-	<div class="piece">
-	  <h2 class="news"> trúng số bí mật trên mạng  </h2>
-	  <p> bà con chú ý, khi ta lên mạng xã hội để giao lưu kết bạn bốn phương, tìm hiểu phương xa, khi nhận được tin nhắn nói rằng bạn đã trúng số việt ten 1 tỉ đồng tiền mặt cần phải nhấn vào link sau để nhận giải, ta không nên vội vã bí mật làm theo tin nhắn này. ít ra cần phải mang đi hỏi thằng tèo hàng xóm. tuy nhiên, khả năng thằng tèo hàng xóm chính là thằng gửi tin lừa đảo, bà con tốt nhất là không nghe theo. những tin nhắn kiểu này chắc chắn 100% là lừa đảo.  </p>
-	</div>
-      </div>
-
-      <div class="column">
-        <div class="piece">
-	  <h2 class="news"> lấy tây  </h2>
-	  <p> bà con chú ý, khi có một cô bác có tâm đến gạ bà con bỏ ra 50 triệu để đi lấy tây đổi đời, bà con nên suy nghĩ cho kỹ. tất nhiên, tôi không dám cấm bà con, tuy nhiên, hiện nay, chính phủ đã quan tâm đến dân nhiều hơn, đời sống của nhân dân không đến nỗi quá khổ, hoặc chết đói chết khát. ta ở nhà làm vườn ao chuồng vẫn sống thoải mái. muốn đi viện có viện, muốn đi học có phổ cập.. đi tây khả năng thoát nghèo cũng không phải là cao, gặp phải tây ác nó đánh rất sợ. tất nhiên tôi không dám cản, chỉ mong bà con suy nghĩ.  </p>
-	</div>
-	<div class="piece">
-	  <h2 class="news"> bán đi trung quốc  </h2>
-	  <p> bà con chú ý, đi lấy chồng trung quốc thường là thảm cảnh. ví dụ một năm được thả về một lần nhưng không biết đường về (do đi qua biên giới rất khó và ác) cũng không về được. gọi điện về cũng không được. gặp nhà tốt là họ cho ăn cháo. ví dụ cả nhà có một nồi cháo trong bếp, đi làm đồng về tự vào múc cháo ăn. như thế này khổ hơn ở việt nam, bà con có công nhận không? ở việt nam bây giờ đã được nhà nước quan tâm, có tiền lương hưu và không ai chết đói cả. ở trong làng đều được có cái ăn đầy đủ. </p>
-	</div>
-      </div>
-
-      <div class="column">
-	<div class="piece">
-
-	  <h2 class="news"> đi làm ở qatar   </h2>
-	  <p> bà con chú ý, tôi đi qua qatar gặp mấy bà con ta đi lạc tìm đường về. tôi kể ra đây là chuyện thật. một cô mở tờ giấy gấp tư ra bảo cô gọi cho tôi số này về, hôm qua tôi bảo nhầm ngày nên chồng tôi ra sân bay nội bài không biết đợi đến bao giờ đã về nhà chưa. một cô khác bảo con gái bắt xe từ đẩu từ đâu ra đón. sau đó các cô kể bị đối xử rất ác ở nhà chủ, nhà chủ một ông  đều lấy mấy người trong họ sinh ra 10 đứa thì tất nhiên theo tỉ lệ thống kê sẽ có 1-2 đứa bị thiểu năng. bà con ta nông dân mà còn hiểu được điều đó. nhiều người đi làm cho họ gặp nhà ác sẽ bị đối xử như nô lệ, giữ giấy tờ và không cho về nhà.  </p>
+	  <div class="piece">
+	    <article>
+	      <h2 class="news"> tin vườn ao chuồng   </h2>
+	      <p class="news-body">
+		bà con chú ý, khi ta đọc tin trên mạng về nông dân đắc lắc mở trang trại được một tỷ một năm ta nên suy nghĩ trước khi vội vay vốn lớn để làm theo. theo tôi, ta nên tìm cách cải thiện cuộc sống với những gì mình sẵn có. dựa vào địa hình và độ rộng của vườn ta để tự nghĩ cách cải tiến và sáng tạo. &#9724
+	      </p>
+	    </article>
+	  </div>
+	  
 	</div>
 	
-	<div class="piece">
-	  <h2 class="news"> lấy chồng đài loan   </h2>
-	  <p> bà con chú ý, lấy chồng đài loan có vẻ nhiều tiền. tuy nhiên, thường ta sẽ phải giồng cho nhà nó 2 luống rau, cày 3 sào ruộng. đàn ông rất gia trưởng, nếu may thì họ cho về thăm nhà dịp tết. tôi không dám cản bà con, tuy nhiên .. mới đầu viết còn buồn cười, xong giữa chừng thấy thảm quá hết cười  </p>
+	<div class="column">
+	  <div class="piece"> <h2 class="news"> đài cảnh giác </h2>
+	    <p class="news-body"> bà con chú ý, khi ta xem tivi nói về các tin lừa đảo bằng các hình thức tinh vi như thôi miên hoặc giết người hung hãn như cầm dao chọc tiết, ta không nên quá sợ hãi đâm ra hoảng gây kém ăn mất ngủ. tỉ lệ tội phạm tất nhiên ở đâu cũng có, nhưng tự mình gây sợ hãi khiến cho chất lượng đời sống giảm, gây cáu bẳn kém ăn sút cân đâm ra lại hay mua thuốc tivi quảng cáo. &#9724</p>
+	  </div>
+	  <div class="piece"> <h2 class="news"> trúng số bí mật trên mạng  </h2>
+	    <p class="news-body"> bà con chú ý, khi ta lên mạng xã hội để giao lưu kết bạn bốn phương, tìm hiểu phương xa, khi nhận được tin nhắn nói rằng bạn đã trúng số việt ten 1 tỉ đồng tiền mặt cần phải nhấn vào link sau để nhận giải, ta không nên vội vã bí mật làm theo tin nhắn này. ít ra cần phải mang đi hỏi thằng tèo hàng xóm. tuy nhiên, khả năng thằng tèo hàng xóm chính là thằng gửi tin lừa đảo, bà con tốt nhất là không nghe theo. những tin nhắn kiểu này chắc chắn 100% là lừa đảo. &#9724 </p>
+	  </div>
+	</div>
+	<div class="column">
+	  <div class="piece"> <h2 class="news"> lấy tây  </h2>
+	    <p class="news-body"> bà con chú ý, khi có một cô bác có tâm đến gạ bà con bỏ ra 50 triệu để đi lấy tây đổi đời, bà con nên suy nghĩ cho kỹ. tất nhiên, tôi không dám cấm bà con, tuy nhiên, hiện nay, chính phủ đã quan tâm đến dân nhiều hơn, đời sống của nhân dân không đến nỗi quá khổ, hoặc chết đói chết khát. ta ở nhà làm vườn ao chuồng vẫn sống thoải mái. muốn đi viện có viện, muốn đi học có phổ cập.. đi tây khả năng thoát nghèo cũng không phải là cao, gặp phải tây ác nó đánh rất sợ. tất nhiên tôi không dám cản, chỉ mong bà con suy nghĩ. &#9724 </p>
+	  </div>
+	
+	  <div class="piece"> <h2 class="news"> bán đi trung quốc  </h2>
+	    <p class="news-body"> bà con chú ý, đi lấy chồng trung quốc thường là thảm cảnh. ví dụ một năm được thả về một lần nhưng không biết đường về (do đi qua biên giới rất khó và ác) cũng không về được. gọi điện về cũng không được. gặp nhà tốt là họ cho ăn cháo. ví dụ cả nhà có một nồi cháo trong bếp, đi làm đồng về tự vào múc cháo ăn. như thế này khổ hơn ở việt nam, bà con có công nhận không? ở việt nam bây giờ đã được nhà nước quan tâm, có tiền lương hưu và không ai chết đói cả. ở trong làng đều được có cái ăn đầy đủ. &#9724</p>
+	  </div>
+	</div>
+	<div class="column">
+	  <div class="piece"> <h2 class="news"> đi làm ở qatar   </h2>
+	    <p class="news-body"> bà con chú ý, tôi đi qua qatar gặp mấy bà con ta đi lạc tìm đường về. tôi kể ra đây là chuyện thật. một cô mở tờ giấy gấp tư ra bảo cô gọi cho tôi số này về, hôm qua tôi bảo nhầm ngày nên chồng tôi ra sân bay nội bài không biết đợi đến bao giờ đã về nhà chưa. một cô khác bảo con gái bắt xe từ đẩu từ đâu ra đón. sau đó các cô kể bị đối xử rất ác ở nhà chủ, nhà chủ một ông  đều lấy mấy người trong họ sinh ra 10 đứa thì tất nhiên theo tỉ lệ thống kê sẽ có 1-2 đứa bị thiểu năng. bà con ta nông dân mà còn hiểu được điều đó. nhiều người đi làm cho họ gặp nhà ác sẽ bị đối xử như nô lệ, giữ giấy tờ và không cho về nhà. &#9724  </p> </div>
+
+	  <div class="piece"> <h2 class="news"> lấy chồng đài loan   </h2>
+	    <p class="news-body"> bà con chú ý, lấy chồng đài loan có vẻ nhiều tiền. tuy nhiên, thường ta sẽ phải giồng cho nhà nó 2 luống rau, cày 3 sào ruộng. đàn ông rất gia trưởng, nếu may thì họ cho về thăm nhà dịp tết. tôi không dám cản bà con, tuy nhiên .. mới đầu viết còn buồn cười, xong giữa chừng thấy thảm quá hết cười &#9724 </p> </div>
 	</div>
       </div>
-      
-
     </div>
+
+    <div class="footer">
+      <p> ~ this product is a demonstration. instructor: <img src="thang.jpg" alt="thang" width="2%"> ~ </p>
+      </div>
+    
   </body>
+</html>
 
-
-  </html>
