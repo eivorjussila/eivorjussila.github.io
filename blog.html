@@ -1,0 +1,100 @@
+<!doctype html>
+
+<head>
+  <title> eivor's blog </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: arial, helvetica, sans-serif;
+    }
+
+    .header {
+      position: relative;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+    }
+
+    .row {
+      display: flex;
+
+    }
+    
+    .column {
+      padding: 10px;
+      height: auto;
+    }
+
+    .column.side {
+      flex: 1;
+    }
+
+    .column.middle {
+      flex: 2;
+    }
+    .footer {
+      background-color: #f73149;
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+      </style>
+    </head>
+    <body>
+
+<div class="header">
+    
+    <img src="mountain2s.jpg" width="100%">
+    <div class="center"><h2> = EIV&#9967R'S BLOG = </h2>
+    </div>
+    </div>
+
+<div class="row">
+  <div class="column middle" style="background-color:#cacac8"> 
+
+    <h2> POST 1</h2>
+    <h5>Title description, Nov 15, 2018</h5>
+    <img src="bike.jpg" width="80%">
+
+    <h2> POST 2</h2>
+    <h5>Title description, Nov 18, 2018</h5>
+    
+
+  </div>
+
+  <div class="column side" style="background-color:#eae8e5"> <h2> &#9822 About me  </h2>
+
+  <img src="foot.jpg" width="50%">
+
+<h2>&#9822 Popular posts</h2>
+
+<a href="#">post 1</a>
+<a href="#">post 2</a>
+<a href="#">post 3</a>
+
+  </div>
+</div>
+
+<div class="footer">
+<p> Footer </p>
+</div>
+
+</body>
+</html>
