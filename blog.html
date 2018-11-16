@@ -17,42 +17,179 @@
       position: relative;
     }
 
-    .center {
+    .centertitle {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      padding: 30px;
       text-align: center;
       font-size: 35px;
     }
 
+    @media screen and (max-width: 700px) {
+  .header .centertitle {
+  font-size: 4vw;
+  width: 60%
+  }
+  }
+
     .row {
       display: flex;
-
+      flex-flow: row wrap;
     }
     
-    .column {
-      padding: 10px;
+
+    .side {
+      display: flex;
+      flex-flow: column wrap;
+      width: 30%;
+      text-align: right;
+      padding: 30px;
+    }
+
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+
+  position: absolute;
+  top: 40%;
+  left: 104%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+    .strip {
+      display: flex;
+      flex-flow: column wrap;
+      width: 10%;
+      background-color: #f2e2cf;
+    }
+
+  
+    .middle {
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+  padding: 30px;
+      position: relative;
+    }
+
+a:link {
+  text-decoration: none;
+  color: black; 
+}
+a:hover {
+  text-decoration: underline;
+}
+
+    .post {
+      display: flex;
+      flex-flow: column wrap;
       height: auto;
+    
+    }
+.post h5 {
+  color: #b6846b;
+}
+    .post p img {
+      opacity: 0.8;
+      float: right;
+      width: 30%;
+      padding: 5px;
     }
 
-    .column.side {
-      flex: 1;
+    .cpagination {
+      text-align: center;
+    }
+    .pagination {
+      display: inline-block;
     }
 
-    .column.middle {
-      flex: 2;
+    .pagination a {
+      color: white;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      border-radius: 50%;
+      margin: 0 4px;
     }
+
+.pagination a.active {
+  border: 1px dotted black;
+  }
+
+.pagination a:hover:not(.active) {
+  background-color: #cacac8;
+}
+
     .footer {
       background-color: #f73149;
       padding: 10px;
       text-align: center;
+      color: white;
     }
 
     @media (max-width: 600px) {
       .row {
         flex-direction: column;
+      }
+      .side {
+        width: 100%;
+      }
+      .middle {
+        width: 100%;
+      }
+      .strip {
+        display: none;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .strip {
+        display: none;
+      }
+      .middle {
+        width: 70%;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .middle {
+        width: 60%;
+      }
+      .strip {
+        display: block;
+        width: 10%;
       }
     }
       </style>
@@ -60,40 +197,89 @@
     <body>
 
 <div class="header">
-    
-    <img src="mountain2s.jpg" width="100%">
-    <div class="center"><h2> = EIV&#9967R'S BLOG = </h2>
+      <img src="./img/mountainl2.jpg" width="100%">
+
+    <div class="centertitle"><h2> =&nbsp;EIV&#9967R'S BLOG&nbsp;= </h2>
     </div>
     </div>
+
+<!--body-->
+
+
+
 
 <div class="row">
-  <div class="column middle" style="background-color:#cacac8"> 
 
-    <h2> POST 1</h2>
-    <h5>Title description, Nov 15, 2018</h5>
-    <img src="bike.jpg" width="80%">
+<div class="side" style="background-color:#eae8e5"> <h2> &#9822 About me  </h2>
 
-    <h2> POST 2</h2>
-    <h5>Title description, Nov 18, 2018</h5>
-    
-
-  </div>
-
-  <div class="column side" style="background-color:#eae8e5"> <h2> &#9822 About me  </h2>
-
-  <img src="foot.jpg" width="50%">
+<picture class="tooltip">
+      <source media="(max-width:400px)" srcset="./img/foots.jpg">
+        <source media="(min-width:400px)" srcset="./img/footm.jpg">
+        <source media="(min-width:800px)" srcset="./img/footl.jpg">
+  <img src="./img/footl.jpg" width="60%">
+  <span class="tooltiptext"> how are you? </span>
+    </picture>
 
 <h2>&#9822 Popular posts</h2>
 
-<a href="#">post 1</a>
-<a href="#">post 2</a>
-<a href="#">post 3</a>
+<a href="design.html"> How do I design my portfolio?</a>
+<a href="she.html">And she marvels..</a>
+<a href="sea.html">Dot</a>
 
   </div>
+
+  <div class="middle" style="background-color:#cacac8"> 
+    <div class="post">
+
+<a href="design.html">      
+        <h2> How do I design my portfolio? </h2>
+      </a>
+        <h5>Cloudy day, Nov 15, 2018</h5>
+        <p> <img src="./img/bikes.jpg"> Hello, so here is how I make this portfolio. First of all, I read the book How to design programs edition 2. I have been mentioning this book so many times but I honestly believe it deserves to be repeated. Second, I use the free online ebook "select star sql" to learn about sql. Third, I go on w3schools website and start to learn html, css and js. During the process of making the websites, I use public domain images from pexels and color suggestions on colorpalettes website. 
+        
+        </p>
+
+      </div>
+      
+    
+
+    <div class="post">
+<a href="she.html">      <h2> And she marvels..</h2> </a>
+        <h5>Sunset, Nov 11, 2018</h5>
+        <p> <img src="./img/girls.jpg"> Nihil et amet explicabo. Quia magni necessitatibus voluptatibus aut consequuntur. Ut officiis voluptas sint similique suscipit. Est repudiandae est dolorem aliquid rerum. Sit porro veniam quia. Error eos voluptates rerum eaque officiis. Accusamus est qui aut aut. Eos exercitationem qui natus. A harum omnis nisi recusandae iusto. Et porro molestiae commodi. Modi asperiores placeat dicta ut. </p>
+    </div>
+      
+      <div class="post">
+<a href="sea.html">      <h2> . </h2> </a>
+        <h5>My sea, Nov 1, 2018</h5>
+        <p> <img src="./img/seas.jpg"> Harum quo voluptas neque delectus tenetur neque. Ullam consequatur tenetur possimus doloremque. Quaerat minima commodi perferendis perspiciatis autem alias. Possimus sit iusto est id et. Molestiae fugiat dolor recusandae officia quis architecto. Eveniet id beatae accusantium. Illum sit et suscipit ut. Maiores sed et accusantium veritatis harum cupiditate quod quae. Distinctio voluptatem quod consectetur vel. Doloribus rerum qui facilis. Qui ipsum quos id molestiae. </p>
+    </div>
+
+
+
+
+   </div>
+
+   <div class="strip">
+   </div>
+
+
+
 </div>
 
+
+
 <div class="footer">
-<p> Footer </p>
+  <div class="cpagination">
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="blog.html" class="active"> 1 </a>
+    <a href="#"> 2 </a>
+    <a href="#"> 3 </a>
+    <a href="#"> &raquo; </a>
+  </div>
+</div>
+<p> this product is a demonstration. </p>
 </div>
 
 </body>
