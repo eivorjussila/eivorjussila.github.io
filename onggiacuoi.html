@@ -1,5 +1,5 @@
 <!doctype html>
-      <html lang="vi">
+      <html lang="en">
     <head>
       <title> ông già cười </title>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
       font-family: helvetica;
     }
       .parallax-one   {
-      background-image: url("boat.jpg");
+      background-image: url("./img/boatl.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -18,7 +18,7 @@
       }
 
       .parallax-two   {
-      background-image: url("hue.jpg");
+      background-image: url("./img/huel.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -26,7 +26,7 @@
       background-size: cover;
       }
       .parallax-three   {
-      background-image: url("alley.jpg");
+      background-image: url("./img/alleyl.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -34,25 +34,16 @@
       background-size: cover;
       }
 
-.parallax-four   {
-      background-image: url("magic.jpg");
+      .parallax-four   {
+      background-image: url("./img/magicl.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       }
-.parallax-five   {
-      background-image: url("people.jpg");
-      min-height: 300px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      }
-
-      .parallax-six   {
-      background-image: url("backlit.jpg")
+      .parallax-five   {
+      background-image: url("./img/peoplel.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -60,8 +51,8 @@
       background-size: cover;
       }
 
-      .parallax-seven   {
-      background-image: url("lake.jpg");
+     .parallax-six   {
+      background-image: url("./img/lakel.jpg");
       min-height: 300px;
       background-attachment: fixed;
       background-position: center;
@@ -69,36 +60,52 @@
       background-size: cover;
       }
 
-
-.webname {
-
-background-color: rgb(0,0,0);
-background-color: rgba(0,0,0,0.4);
-color: white;
-font-weight: bold;
-font-size: 80px;
-border: 10px solid #f1f1f1;
-position: absolute;
-top: 25%;
-left: 50%;
-transform: translate(-50%,-50%);
-z-index: 2;
-width: 700px;
-padding: 20px;
-text-align: center;
-
+.bannerholder {
+  height: 300px;
+  width: 98%;
+  top: 2%;
+  position:absolute;
 }
 
-ul.lang {
-  padding: 8px 16px;
-  list-style: none;
-  background-color: none;
 
-  position: absolute;
-top: 32%;
+.banner {
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.4);
+border-top: 10px solid #f1f1f1;
+border-left: 10px solid #f1f1f1;
+border-right: 10px solid #f1f1f1;
+position: absolute;
+z-index: 2;
+text-align: center;
+width: 50%;
+height: 30%;
+top: 45%;
 left: 50%;
 transform: translate(-50%,-50%);
-z-index: 2;
+padding: 20px 20px 1px 20px;
+}
+
+.webname {
+  color: white;
+  font-weight: bold;
+}
+
+.lang {
+  list-style: none;
+  position: absolute;
+  z-index: 2;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.4);
+border-left: 10px solid #f1f1f1;
+border-right: 10px solid #f1f1f1;
+border-bottom: 10px solid #f1f1f1;
+width: 50%;
+height: 10%;
+padding: 0 20px 20px 20px;
+transform: translate(-50%, -50%);
+top: 70%;
+left: 50%;
+text-align: center;
 }
 
 ul.lang li {
@@ -114,15 +121,22 @@ ul.lang li+li:before {
 ul.lang li a {color: white;}
 
 
-h1 {
+h2 {
   text-align: center;
   color: #092a3a;
+}
+
+h2::before {
+  content: "\26E3";
 }
 p {
   text-align: center;
 margin: 20px;
 padding: 20px;}
 
+p::after {
+  content: '\2767';
+}
 
 .accordion {
   background-color: ghostwhite;
@@ -135,6 +149,10 @@ padding: 20px;}
   text-align: left;
   font-size: 15px;
   transition: 0.4s;
+}
+
+.accordion::before{
+  content: '\2766'
 }
 
 .active, .accordion:hover {
@@ -161,72 +179,77 @@ padding: 20px;}
   transition: max-height 0.2s ease-out;  
 }
 
+@media screen and (max-width: 500px) {
+  .banner .webname {
+  font-size: 6vw;
+  }
+  }
+
     </style>
 
     </head>
       <body>
         <div class="parallax-one"> </div>
-<div class="webname"> ÔNG GIÀ CƯỜI </div>
+        <div class="bannerholder">
+          <div class="banner"> 
+            <h1 class="webname"> ÔNG GIÀ CƯỜI </h1> </div>
+          <div>
+            <ul class="lang">
+              <li> <a href="onggiacuoi-en.html">ENG</a></li>
+              <li><a href="onggiacuoi.html">VIỆT</a></li>
+            </ul>
+          </div>
+        </div>
 
-<ul class="lang">
-<li> <a href="#">ENG</a></li>
-<li><a href="#">VIỆT</a></li>
-</ul>
+
 
 
 <div> 
-  <h1> &#9955 who are we? </h1>
+  <h2> chúng tôi là ai? </h2>
 
-    <p> we are a small start up, based in our cosy village by the sea in Haiphong, Vietnam. currently we have 25 members who are actively working because we believe in making a healthy space for everyone to grow and our mission is to give our hometown a more lively and modern touch. &#10087
- </p>
+    <p> chúng tôi là một nhóm khởi nghiệp nhỏ, đặt tại một ngôi làng cạnh bờ biển Hải Phòng, Việt Nam. hiện tại đội ngũ chúng tôi có khoảng 25 thành viên. tất cả đều làm việc rất chăm chỉ bởi vì chúng tôi tin vào sứ mệnh tạo ra một không gian sống lành mạnh cho tất cả bà con, ai cũng được tự do phát triển cái tôi. cụ thể hơn, chúng tôi tìm cách mang lại cho dân làng một không gian sống động và hiện đại hơn. </p>
 </div>
 
     <div class="parallax-two"> </div>
 
-      <div>
+  <div>
+    <h2> mục đích </h2>
+    <p> chúng tôi cung cấp giải pháp cho các nhu cầu căn bản của con người, ví dụ: vệ sinh, nước uống, đồ ăn, quần áo, giáo dục tình dục vv. chúng tôi muốn giữ lại hồn dân tộc trong từng nếp áo và vành khăn của người bản xứ, nhưng cùng lúc đó, muốn mang lại một sự chuyển biến tích cực từ công nghệ tiên tiến. </p>
+  </div>
+  
+  <div class="parallax-three"> </div>
 
-<h1> &#9955 our purpose </h1>
+<div>
+<h2> các dự án đang triển khai </h2>
 
-<p> we provide solution for basic needs of human being, such as: hygene, water, food, clothing, and sex education. we believe in preserving the vibrance of a small town culture, but at the same time, want to give it a modern touch of wizardry magic of technology. &#10087
- </p>
-
-    </div>
-   <div class="parallax-three"> </div>
-
-    <div>
-<h1> &#9955 what we do? </h1>
-
-  <button class="accordion"> &#10086 healthy individual lifestyle </button>
+  <button class="accordion">  nếp sống lành mạnh cho từng cá nhân </button>
     <div class="panel">
-      <p> we encourage better toilett and educate about hygene pads for female. we do not stigmatise menstruation and talk about it openly. <br>
+      <p> chúng tôi phổ cập vệ sinh cá nhân, nhà vệ sinh bệ ngồi bằng sứ thay vì cầu tõm hay đào hố chôn cứt ngoài vườn. phân bắc sẽ được xử lý sinh ra khí biogas để đun nấu, nằm gọn trong quy trình vườn ao chuồng, giúp bà con tiết kiệm nhiên liệu. tránh mua nhằm gas đểu trôi nổi trên thị trường. <br><br>
 
-  there is a problem with this small village, the farmers produce meat and vegetables at small scale but they use a lot of chemical products. <br>
- we create a sport space, local sport such as flying kites, war game on buffalo for kids while they are doing chore for their family
+  chúng tôi phổ cập và nói về kỳ kinh nguyệt của phụ nữ một cách cởi mở và theo phương pháp khoa học. không đùa cợt hay phỉ nhổ xằng bậy, cũng không tuyên truyền những thứ ba lăng nhăng như "phụ nữ đến tháng là bị tội, không được thắp nhang hay lên chùa". tôi nhắc lại, bà con không nghe liên thiên. một là ngày xưa phật là thằng người như bác kình thu tiền điện cuối làng. hắn chết là tắt điện trong não là hết. không thành đức phật, không thành như lai, không về với tiên tổ. hai là không có ai, kể cả phật ngày xưa lúc sống, nói rằng kinh nguyệt là bị tội, và nhục nhã cần phải giấu diếm như mèo giấu cứt. <br> <br>
+  chúng tôi khuyến khích bà con trồng rau nuôi lợn gà ở quy mô nhỏ, sau đó có thể rao bán lẫn nhau (chúng tôi tạo ra một trang chợ mua bán điện tử cho bà con trong làng, ví dụ gà nhà bà ơn đang đẻ 10 trứng, các cô bác đặt để thằng tèo con bà ơn đi bộ miễn phí ship hàng đến cho bà con). bà con chú ý, không tham xằng đi mua thuốc trung quốc về bơm vô tội vạ vào cây cối thực phẩm, không ngâm  đất đèn vào quả hồng gây độc hại, không nuôi bằng các loại cám siêu nạc, gây hỏng dạ dày của các bà con việt nam ta. <br><br>
+  chúng tôi tạo ra một không gian thể dục thể thao cho toàn bộ dân làng từ già đến trẻ, ví dụ thả diều, chơi trận giả, vật nhau, chạy bộ buổi sáng quanh cánh đồng lúa mới hít hà mùi dâu bể (đề nghị bà con không vừa giả đò chạy vừa ăn trộm hoa màu ở ruộng nhà thằng hàng xóm cho bõ tức nó vứt rác ra ngõ nhà mình)
     </div>
 
 
-  <button class="accordion"> &#10086 educational groups for younglings </button>
+  <button class="accordion">  sinh hoạt văn hóa cho lớp trẻ </button>
     <div class="panel">
-      <p>  english, coding, poetry, logic,..
+      <p>  chúng tôi tạo ra các nhóm dạy tiếng anh, phổ cập tin học, làm thơ, dạy tư duy logic.. để các bạn trẻ giúp đỡ nhau, xa rời thói hư tật xấu ví dụ lên mạng mua mặt nạ hàn quốc, bán hàng online nhập từ nhật về, hay chụp ảnh bôi xóa thành búp bê trông cho sang chảnh.
       </p>
     </div>
 
-  <button class="accordion"> &#10086 sex education </button>
+  <button class="accordion"> giáo dục tình dục</button>
     <div class="panel">
-      <p> we aim to provide better sex education. because emma thompson said "at first sighting, male's genital is quite alarming" and we agree. we speak about it, frankly and we do not use euphemism which limits freedom of speech. we do not encourage joking because it hurts and shames the scientific understanding.
+      <p> chúng tôi mong muốn tạo ra môi trường lành mạnh để bàn luận công khai và vô tư về tình dục và bộ phận sinh dục của nam và nữ. emma thompson nói rằng "bộ phận sinh dục nam khi mới nhìn thấy lần đầu trông hơi giật mình" và chúng tôi hoàn toàn đồng ý với ý kiến đó, chúng tôi tin rằng dân làng cần có tiếp cận với giáo dục tình dục đúng đắn. <br><br>chúng tôi cực lực cảnh báo dân làng rằng phim tình dục tràn lan của nhật trên thị trường hiện nay không phải là giáo dục tình dục mà là ngược lại của giáo dục tình dục, tuy nhiên do không có lựa chọn nào khác, hầu hết nam giới và nữ giới coi đó là nguồn giáo dục tình dục duy nhất và đây là thực trạng vô cùng nguy hiểm. khi vào mạng tìm kiếm và gõ chữ "xem phim" sẽ được bộ máy tìm kiếm điền nốt vào sau cụm từ "xem phim" những câu kiểu như "xem phim dit nhau". tại sao? bởi vì người việt tìm kiếm cụm từ này quá nhiều nên họ tự hiện ra để điền nốt cho tiện. chúng tôi thấy như thế này là báo động đỏ.<br><br> các xã hội hậu xô viết thường có tỉ lệ bệnh tâm lý tâm thần, bệnh hoạn tình dục rất cao do chế độ stalin kìm kẹp hạ độc anh em lừa đảo nhau vợ chồng chém giết chỉ điểm nhau.. ta chưa bỏ được thói quen nói xấu người khác.
       </p>
     </div>
 
-  <button class="accordion"> &#10086 communal activity </button>
+  <button class="accordion">  hội làng: đua thuyền, cắm trại..
+ </button>
     <div class="panel">
-      <p> we promote cultural activity. and aim to build a healthy space of sharing lives together with the understanding of boundary, privacy and solidarity. we care about individual growth and we deeply believe that it is the only way to facilitate the development of a community. when everybody understands that they has a healthy space to grow and respect other's boundary. we do not encourage sacrifice the solidarity of one individual for the sake of community. that is not our belief.
+      <p> chúng tôi khuyến khích các lễ hội như lễ hội trung thu ngày rằm mừng vụ mùa bội thu. bà con nhảy múa quanh đống lửa dưới ánh trăng giả vờ cầu thần đất mẹ và sông nin vĩnh hằng. <br><br>vào mùa xuân dân làng có lễ hội đua thuyền dọc theo nhánh sông văn úc đổ ra phía biển. thể hiện ước vọng ngày bé nón rách chạy đua theo thuyền gào thét khản cổ giữa tiếng trống gõ nhịp bập bùng và tiếng hò "dô" từ người cầm chịch để người chèo tắt não mà chỉ biết chèo hết mức có thể. <br><br>vào mùa hè, xã sẽ tổ chức cắm trại nhảy múa cho các cháu thiếu nhi nhi đồng, các bé sẽ được chở xe công nông từ làng xuống sân vận động xã và nhảy múa hát ca. giữa lúc nhộn nhịp các thôn không nên đánh cãi nhau. chúng tôi khuyến khích các buổi họp thôn để bà con đưa ra ý kiến ở sân đình, thay vì nói oang oang chửi đổng nhà nước ở cây đa lúc đi làm ruộng về.<br><br>
 
-> dragon boat racing festival:
-
-> communal camping fest:
-
-> community growth conversation:
-we consciously organise a space where people come and raise their voice about how they want to contribute, or simply how they want to grow their own way. that is a part of a healthy community too. &#10087
+giữa tinh thần của các sự kiện chung vui này, chúng tôi không khuyến khích màu sắc tôn giáo, nhưng khuyến khích sự chia sẻ hết mình của bà con lối xóm, với tôn chỉ giữ gìn ranh giới cá nhân của từng người, từ phụ nữ cho đến đàn ông, trẻ con cho đến người già. bất kỳ người nào, bất kỳ lúc nào, khi họ muốn rời khỏi cuộc vui hay từ chối làm gì (uống rượu), đều có thể tự bước ra không ai đặt câu hỏi hay nài ép gì. chúng tôi tin rằng tôn trọng ranh giới cá nhân là một phần rất quan trọng của cuộc vui.
 
         </p>
       </div>
@@ -248,30 +271,28 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 
-    </div>
+  </div>
 
-   <div class="parallax-four"> </div>
+  <div class="parallax-four"> </div>
 
-<div >
-<h1> &#9955 do business with us </h1>
-
-<p> we consider any kind of partnership that aligns with our mission of making the world a better place. you can be a sponsor, or if you want to work out a solution for people's life through our facility, please do not hesitate to contact us. first contact at business@onggiacuoi.com &#10087
-
-</p>
-
+<div>
+  <h2> đối tác kinh doanh </h2>
+  <p> chúng tôi xem xét tất cả các hình thức đối tác kinh doanh mà cùng chí hướng với sứ mệnh tạo ra một thế giới tốt đẹp hơn cho tất cả mọi người. bạn có thể là nhà tài trợ, có thể qua danh tính của chúng tôi cung cấp một giải pháp nào đó cho đời sống bà con đỡ khổ.. liên hệ qua địa chỉ email kinhdoanh@onggiacuoi.com hoặc số điện thoại 123-456-789. </p>
 </div>
 
-  <div class="parallax-five"> </div>
+<div class="parallax-five"> </div>
 
-  <h1> &#9955 join our team </h1>
-  <p> 
+<div>
+  <h2> làm việc trong đội chúng tôi
+ </h2>
+  <p> chúng tôi có không gian làm việc rộng mở. bạn luôn luôn có thể nói với chúng tôi điều gì bạn cảm thấy cần nói. gửi cv của bạn về cho eivor@onggiacuoi.com
 
-we have an open environment. you can always tell us what we are missing: you. send your cv to eivor: eivor@onggiacuoi &#10087</p>
-  <div class="parallax-six"> </div>
-<div class="parallax-seven"> </div>
+ </p>
+</div>
 
+<div class="parallax-six"> </div>
 
   </body>
-  </html>
+</html>
       
     
