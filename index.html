@@ -1,53 +1,67 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <title>eivor</title>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="eivor's cv">
+  <meta name="keywords" content="HTML,CSS,JS,Racket,game theory">
+  <meta name="author" content="eivor jussila">
+
+  <style type="text/css">
+
 * {
   box-sizing: border-box;
 }
-
 body {
   background-color: #798e93;
-
   font-family: arial;
-  font-size: 17px;
 }
-
-h2 {
-  color: #1f3c4a;
-}
-
-
-
 .container {
   position: relative;
   width: 100%;
   margin: 0 auto;
 }
-
-.container img {
-  vertical-align: middle;
-}
-
 .container .ava {
   width: 20%;
   position: absolute;
-  bottom: 50%;
+  bottom: 45%;
   left: 70%;
   border-radius: 50%;
 }
-
-.container .content {
+.container .headercontent {
   position: absolute;
   bottom: 10%;
   background: rgba(0,0,0);
   background: rgba(0,0,0,0.5);
   color: #f1f1f1;
   width: 100%;
-  padding: 20px;
+}
+
+.headercontent h1 {
+  margin-left: 15%;
+}
+
+.headercontent p {
+  margin-left: 47%;
+}
+
+@media screen and (max-width: 600px) {
+.headercontent h1 {
+    font-size: 6vw;
+    margin-left: 10%;
+  }
+.headercontent p {
+    font-size: 3vw;
+    margin-left: 20%;
+  }
+}
+
+
+
+/*body style*/
+h2 {
+  color: #1f3c4a;
 }
 
 .bodybox {
@@ -57,7 +71,8 @@ h2 {
 }
 
 .section, .row {
-  background-color: #f1d7b9;
+/*  background-color: #f1d7b9;*/
+  background-color: #dbd5c5;
 }
 
 .section, .row, .degree {
@@ -65,8 +80,13 @@ h2 {
   text-align: center;
 }
 
+.section h2::before, .degree h2::before {
+  content: "\265E";
+}
+
 .degree {
-  background-color: #dbd5c5;
+  background-color: #f1d7b9;
+  
 }
 
 .row {
@@ -76,8 +96,55 @@ h2 {
   justify-content: space-around;
 }
 
+iframe {
+  height: 200px;
+  width: 100%;
+  border: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+}
+
 .card {
   width: 30%;
+  margin: 10px;
 }
 
 .card, .strip {
@@ -95,10 +162,11 @@ h2 {
 }
 
 .desc {
-  border-style: inset;
+/*  border-style: inset; */
   padding: 10px;
   margin: 20px;
   background-color: #1f3c4a;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 a:link, a:visited {
@@ -112,51 +180,97 @@ a:hover .desc, a:active .desc {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 600px) {
+  .row {
+    flex-flow: column wrap;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .row {
+    flex-flow: row wrap;
+  }
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1000px)
+{
+  .card {
+    width: 30%;
+  }
+}
 
 </style>
 </head>
 <body>
   <div class="container">
     <div class="headerimg">
-    <img class="ava" src="human3.jpg">
+      <picture>
+        <source media="(max-width:400px)" srcset="./img/humans.jpg">
+        <source media="(min-width:400px)" srcset="./img/humanm.jpg">
+        <source media="(min-width:800px)" srcset="./img/humanl.jpg">
+        <img class="ava" src="../img/humanl.jpg" width="auto">
+      </picture>
 </div>
-    <img src="forest.jpg" alt="lake" style="width:100%">
-    <div class="content">
-      <h1 style="margin-left: 10%"> &#9790 eivor jussila &#9789 </h2>
-      <p style="margin-left: 55%"> &#62 see that star always.. pointing north?  </p>
+
+<picture>
+  <source media="(max-width:400px)" srcset="./img/forests.jpg">
+  <source media="(min-width:400px)" srcset="./img/forestm.jpg">
+  <source media="(min-width:800px)" srcset="./img/forestl.jpg">
+  <source media="(min-width:1300px)" srcset="./img/forestxl.jpg">
+  <img src="../img/forestl.jpg" alt="forest" style="width:100%">
+</picture>
+
+<div class="headercontent">
+  <h1 > &#9790 eivor jussila &#9789 </h2>
+  <p > &#62 see that star always.. pointing north?  </p>
     </div>
    </div>
 </div>
 
+<!--body-->
+
 <div class="bodybox">
   <div class="section">
-    <h2> &#9822 MY PORTFOLIO </h2>
+    <h2>  my portfolio </h2>
     <b > #lang: HTML, CSS, JS </b>
   </div>
 
   <div class="row">
     <div class="card"> 
-      <iframe src="onggiacuoi.html" height="200" width="300"></iframe>  
+      <iframe src="onggiacuoi.html">
+      </iframe>  
+      
       <a href="onggiacuoi.html" target="_blank">
-        <div class="desc">
+        <div class="desc tooltip">
+          <span class="tooltiptext">open a new window</span>
         ông già cười </div> </a> </div>
 
     <div class="card"> 
-      <iframe src="trangtin.html" height="200" width="300"></iframe>
+      <iframe src="trangtin.html"></iframe>
       <a href="trangtin.html" target="_blank">
-        <div class="desc"> trang tin
+        <div class="desc tooltip">
+    <span class="tooltiptext">open a new window</span>
+         trang tin
         </div> </a> </div>
 
     <div class="card"> 
-      <iframe src="blog.html" height="200" width="300"></iframe>
+      <iframe src="blog.html"></iframe>
       <a href="blog.html" target="_blank">
-        <div class="desc">  personal blog </div>
+        <div class="desc tooltip"> 
+<span class="tooltiptext">open a new window</span>
+         personal blog </div>
         </a> </div>
   </div>  
   
   <div class="degree">
     <div style="height: 100px">
-    <h2> &#9822 MY DEGREE </h2>
+    <h2> my degree </h2>
     <b >#lang: racket</b>
   </div>
     <div class="strip">
