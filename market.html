@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<title>chợ đầm </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="chợ đầm">
+  <meta name="author" content="eivor jussila">
+  <style type="text/css">
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: helvetica;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+}
+
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f5431a;
+}
+
+.lcontainer {
+	padding: 16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+}
+
+.modal-content {
+	background-color:  #fefefe;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+.animate {
+	animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0);}
+	to {transform: scale(1);}
+}
+
+@media screen and (max-width: 300px)
+{
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+header {
+	text-align: center;
+	font-family: helvetica;
+	padding: 20px;
+	background-color: #371f17;
+	color: white;
+	text-transform: uppercase;
+}
+h2, h3 {
+	text-align: center;
+	background-color: #e9ddcb;
+	color: #371f17;
+}
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.col {
+	width: 30%;
+	border: 2px dotted #e9ddcb;
+	margin: 10px;
+	padding: 10px;
+}
+.piece {
+	width: 20%;
+	text-align: center;
+	border: 2px dotted #e9ddcb;
+}
+
+.nhap {
+	background-color: #8d3113;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+.nhap:hover{
+	opacity: 0.8;
+}
+.nhanh {
+	background-color: #c76838;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.nhan {
+	background-color: #f5431a;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+.mua {
+	background-color: #c76838;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.row {
+		flex-flow: column wrap;
+	}
+	.col, .piece {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.col {
+		width: 45%;
+	}
+	.piece
+	{
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.col {
+		width: 30%;
+	}
+	.piece {
+		width: 20%;
+	}
+}
+
+  </style>
+
+</head>
+<body>
+
+<div id="dangnhap" class="modal">
+	<form class="modal-content animate" method="post">
+		<span onclick="document.getElementById('dangnhap').style.display='none'" class="close" title="close modal">&times;</span>
+		
+		<div class="lcontainer">
+			<label for="uname"><b>Tên đăng nhập/ số điện thoại
+</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required autofocus>
+
+			<label for="psw"><b>Mật khẩu</b></label>
+			<input type="password" placeholder="Enter password" name="psw" required>
+
+			<button class="nhap" type="submit" focus="true">đăng nhập </button>
+			<label <input type="checkbox" checked="checked" name="remember">Ghi nhớ đăng nhập </label>
+		</div>
+
+		<div class="lcontainer" style="background-color:#f1f1f1">
+			<button type="button"
+			onclick="document.getElementById('dangnhap').style.display='none'"
+			class="cancelbtn">Cancel </button>
+
+			<span class="psw"> <a href="#"> quên mật khẩu?</a> </span>
+		</div>
+	</form>
+</div>
+
+<script>
+var modal = document.getElementById('dangnhap');
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}
+</script>
+
+
+	<header>
+		<h6> cổng thông tin giao dịch thương mại </h6>
+		<h1> chợ đầm </1>
+	</header>
+
+	<div class="row">
+		<div class="col">
+			<h2> 2 cách đăng tin rao bán </h2>
+			<ul> <li> tạo tài khoản để đăng lâu dài hoặc đã có tài khoản -> vào đây đăng nhập: 
+<button class="nhap" onclick="document.getElementById('dangnhap').style.display='block'" style="width:auto"> đăng nhập </button>
+			</li>
+			<li> đăng nhanh cho tao một phát này tao đi ra đồng rừng rẫy cỏ</li>
+<button class="nhanh" onclick="document.getElementById('id01').style.display='block'" style="width:auto"> đăng nhanh </button>
+
+			</ul>
+			<p> đang thèm ăn cua, mời kéo xuống ghé vào hàng tôm xem hôm nay có thanh niên nào đi xúc tép sớm qua bán không</p>
+		</div>
+
+		<div class="col">
+			<h2> công ăn việc làm </h2>
+			<ul>
+<li>			<h4> trẻ nít </h4>
+		<ul>
+			<li> việc 1: em nào đang chơi ngoài sân, đi ship cho bà cụ phong 1 túi rau từ đầu làng đến cuối làng, trả 2 thanh kẹo lạc. <button class="nhan" onclick="document.getElementById('id01').style.display='block'" style="width:auto"> nhận việc </button></li>
+			<li> việc 2: chăn trâu nhà bác ba <button class="nhan" onclick="document.getElementById('id01').style.display='block'" style="width:auto"> nhận việc </button>
+</li>
+		</ul> 
+	</li>
+<li>
+			<h4> thanh niên trai tráng</h4>
+			<ul>
+			<li> việc 1: cần thợ phụ hồ xây nhà ông bươn <button class="nhan" onclick="document.getElementById('id01').style.display='block'" style="width:auto"> nhận việc </button> </li>
+			<li> việc 2: cần thợ may áo dài đi lễ hội <button class="nhan" onclick="document.getElementById('id01').style.display='block'" style="width:auto"> nhận việc </button> </li>
+		</ul>
+	</li>
+		</div>
+
+		<div class="col">
+			<h2> bảng tin loa phường </h2>
+			<ul>
+				<li>
+			bà con ta không nghĩ cách hại nhau. ai có tranh cãi vào mục tranh cãi để bàn luận </li>
+
+			<li> bà con vào <a href="trangtin.html">trang tin</a> để đọc thông báo bà con chú ý hàng tuần.. </li>
+
+			<li>lịch hội:
+				<ul> <li>
+			hội làng: 10/1</li><li> 	
+			đua thuyền: 20/2</li><li>
+			cắm trại: 30/6</li> </li>
+		</ul>
+		</div>
+	</div>
+		<h3>hàng tôm hàng cá </h3>
+	<div class="row">
+	<div class="piece">
+		<h5>anh chí</h5>
+		<img src="./img/fishs.jpg" alt="fishs" width="100%">
+		<p>cá mới đánh về từ tờ mờ sớm. <br>3 đồng. <br>
+
+		 <button class="mua" onclick="document.getElementById('id01').style.display='block'"> mua </button>
+</p>
+	</div>
+	<div class="piece">
+		<h5>ông vươn </h5>
+<img src="./img/clams.jpg" alt="clams" width="100%">
+	
+	<p>sò trồng ở bờ quang phục mới vớt.<br> 5 đồng.
+<button class="mua" onclick="document.getElementById('id01').style.display='block'" > mua </button>
+	</p>
+
+	</div>
+	<div class="piece">
+		<h5>sắp có</h5>
+	</div>
+	<div class="piece">
+		<h5>sắp có</h5>
+	</div>
+	<div class="piece">
+		<h5>sắp có</h5>
+	</div>
+</div>
+
+<h3> hàng rau </h3>
+<div class="row">
+	<div class="piece">
+		<h5>ông bá</h5>
+		<img src="./img/aspas.jpg" width="100%">
+		măng tây giồng ngoài vồng mới cắt.<br>
+3 đồng.
+	</div>
+
+	<div class="piece">
+		<h5> bác kình trong nội </h5>
+		<img src="./img/cais.jpg" width="100%">
+		rau cải mầm ăn lẩu 3 luống mới lên <br>
+4 đồng.
+	</div>
+
+	<div class="piece">
+		<h5> bà nghị </h5>
+		<img src="./img/onions.jpg" width="100%">
+		hành tỏi <br>
+1 đồng.
+	</div>
+
+	<div class="piece">
+		<h5> cô tư </h5>
+		<img src="./img/corns.jpg" width="100%">
+		bắp ngọt mới bẻ hôm qua <br>
+3 đồng.
+
+	</div>
+
+	<div class="piece">
+		<h5> sắp có </h5>
+	</div>
+
+</div>
+
+<h3> hàng thịt </h3>
+<div class="row">
+<div class="piece">
+<h5>bà ơn</h5>
+<img src="./img/meats.jpg" width="100%">
+thịt bò mới giết<br>
+6 đồng
+</div>
+
+<div class="piece">
+<h5>cô sim</h5>
+<img src="./img/chickens.jpg" width="100%">
+gà lùn mới lớn <br>
+4 đồng
+</div>
+
+<div class="piece">
+<h5>bà hoa</h5>
+<img src="./img/grinds.jpg" width="100%">
+thịt xay<br>
+2 đồng.
+</div>
+
+<div class="piece">
+<h5>sắp có</h5>
+</div>
+<div class="piece">
+		<h5> sắp có </h5>
+	</div>
+</div>
+
+<h3> hàng ăn nhẹ </h3>
+<div class="row">
+
+	<div class="piece">
+		<h5>bác miền </h5>
+		<img src="./img/soups.jpg" width="100%">
+		cháo rau củ <br>
+2 đồng
+	</div>
+	<div class="piece">
+		<h5> cô thi</h5>
+		<img src="./img/buns.jpg" width="100%">
+		bún chân giò <br>
+3 đồng
+	</div>
+	<div class="piece">
+		<h5> anh chã</h5>
+		<img src="./img/buntoms.jpg" width="100%"> 
+		bún tôm gia truyền <br>
+2 đồng
+	</div>
+	<div class="piece">
+		<h5> bà liên </h5>
+		<img src="./img/banhmis.jpg" width="100%">
+		bánh mì kẹp chả <br>
+2 đồng
+	</div>
+	<div class="piece">
+		<h5> sắp có </h5>
+	</div>
+
+</div>
+<h3> hàng chè </h3>
+<div class="row">
+	<div class="piece">
+		<h5>cô tư cuối làng </h5>
+		<img src="./img/fruits.jpg" width="100%">
+		hoa quả vườn nhà<br>
+1 đồng
+	</div>
+	<div class="piece">
+		<h5>nhà dung </h5>
+		<img src="./img/smoothies.jpg" width="100%">
+		sinh tố dâu <br>
+2 đồng
+	</div>
+	<div class="piece">
+		<h5>bà bỉ </h5>
+		<img src="./img/bananas.jpg" width="100%">
+		chuối <br>
+1 đồng 
+	</div>
+
+<div class="piece">
+<h5>sắp có</h5>
+</div>
+
+<div class="piece">
+<h5>sắp có</h5>
+</div>
+
+</div>
+<h3> hàng xén </h3>
+
+
+<div class="row">
+
+<div class="piece">
+		<h5> bà hoa</h5>
+		<img src="./img/eggs.jpg" width="100%">
+		chục trứng gà mới <br>
+2 đồng
+	</div>
+	<div class="piece">
+		<h5>ông hạ </h5>
+		<img src="./img/egg2s.jpg" width="100%">
+		chục trứng vịt <br>
+1 đồng
+	</div>
+<div class="piece">
+<h5>ông điển</h5>
+alô bà con, nhà tôi có mụ gà mái ra chừng sắp đẻ, ai cần vui lòng đặt ngay cho nóng 
+</div>
+<div class="piece">
+<h5>sắp có</h5>
+</div>
+<div class="piece">
+<h5>sắp có</h5>
+</div>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
