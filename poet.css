@@ -227,6 +227,12 @@ padding-top: 40px;
 	.llist {
 		padding: 0;
 	}
+	.fakeimg {
+		display: none;
+	}
+	.newstit {
+		font-size: 14px;
+	}
 }
 
 
